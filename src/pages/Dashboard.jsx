@@ -6,7 +6,7 @@ import { useNavigate } from "react-router-dom";
 
 export default function Dashboard() {
   const { tasks } = useContext(TaskContext);
-  const [filter, setFilter] = useState("all");
+  const [filter, setFilter] = useState("pending");
   const navigate = useNavigate();
 
   const filteredTasks =
@@ -48,9 +48,9 @@ export default function Dashboard() {
           mb: 2,
         }}>
         {[
-          { label: "All", value: "all", activeBg: "#78a9ea", activeColor: "#fff", inactiveBg: "#74a9e568" },
+          { label: "Pending", value: "pending", activeBg: "#fff38e", activeColor: "#926311", inactiveBg: "#fff38e68" },
           { label: "Completed", value: "completed", activeBg: "#57bd86", activeColor: "#fff", inactiveBg: "#60d99868" },
-          { label: "Pending", value: "pending", activeBg: "#fff38e", activeColor: "#926311", inactiveBg: "#fff38e68" }
+          { label: "All", value: "all", activeBg: "#78a9ea", activeColor: "#fff", inactiveBg: "#74a9e568" },
         ].map(({ label, value, activeBg, activeColor, inactiveBg}) => (
           <Button
             key={value}
