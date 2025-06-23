@@ -105,3 +105,5 @@ npm install
 npm start
 ```
 This will open the app at [http://localhost:3000](http://localhost:3000) in your browser.
+
+You can also watch the following demo video for a quick overview of the app:
